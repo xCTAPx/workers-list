@@ -1,0 +1,36 @@
+<div class="modal">
+    <div class="flex-wrap">
+        <h1 class="modal-title">Добавление / Редактирование</h1>
+        <button class="modal__close">x</button>
+    </div>
+    <hr>
+    <div class="flex-wrap">
+        <div class="avatar">
+            <img src="{{worker.avatar}}" alt="avatar" class="avatar__img">
+            <input type="text" name="avatar" placeholder="Ссылка на аватар" [(ngModel)]="worker.avatar">
+        </div>
+        <div class="info">
+            <input type="text" name="name" placeholder="Имя" [(ngModel)]="worker.name">
+            <input type="text" name="city" placeholder="Город" [(ngModel)]="worker.city">
+            <input type="text" name="surname" placeholder="Фамилия" [(ngModel)]="worker.surname">
+            <input type="text" name="street" placeholder="Улица" [(ngModel)]="worker.street">
+            <input type="date" name="birthday" [(ngModel)]="worker.birthday">
+            <input type="text" name="house" placeholder="Дом" [(ngModel)]="worker.house">
+            <select name="position" [(ngModel)]="worker.position">
+                <option value="техник">Техник</option>
+                <option value="программист">Программист</option>
+                <option value="бухгалтер">Бухгалтер</option>
+            </select>
+            <input type="text" name="flat" placeholder="Квартира" [(ngModel)]="worker.flat">
+            <div class="label__remote">
+                <p for="remote">Удалёнка: </p><input type="checkbox" name="remote" class="check"
+                    [(ngModel)]="worker.remote">
+            </div>
+        </div>
+    </div>
+    <h1 class="fill-text">The best job in the world</h1>
+    <h1 class="fill-text">The best job in the world</h1>
+    <h1 class="fill-text">The best job in the world</h1>
+    <h1 class="fill-text">The best job in the world</h1>
+    <button class="btn__finish" (click)="handleWorker()">Завершить</button>
+</div>

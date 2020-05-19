@@ -1,0 +1,118 @@
+.modal {    
+    position: absolute;
+    top: 50px;
+    left: 250px;
+
+    height: 600px;
+    width: 1000px;
+    
+    background: rgb(168, 166, 166);
+}
+
+.modal-title {
+    font-size: 20px;
+    margin: 5px 0 0 10px;
+}
+
+.avatar {
+    margin: 10px 0 20px 10px;
+}
+
+.avatar__img {
+    display: block;
+    border: 1px solid black;
+    height: 220px;
+    width: 180px;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.info {
+    margin: 25px 20px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: space-between;
+    input, select {
+        width: 48%;
+        height: 25px;
+        cursor: pointer;
+        padding-left: 5px;
+    }
+    .label__remote {
+        display: flex;
+        width: 20%;
+    }
+}
+
+.fill-text {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    color: rgb(29, 27, 27);
+}
+
+.modal__close {
+    width: 27px;
+    cursor: pointer;
+    border: none;
+    background: red;
+    color: #fff;
+    outline: none;
+}
+
+.btn__finish {
+    display: block;
+    margin: 20px auto;
+    padding: 3px;
+    height: 25px;
+
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1275px) {
+    .modal {    
+        left: 100px;
+    }
+}
+
+@media screen and (max-width: 1122px) {
+    .modal {    
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 1034px) {
+    .modal {    
+        width: 800px;
+    }
+    .info {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 836px) {
+    .modal {    
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .modal {    
+        width: 700px;
+    }
+    .info {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 702px) {
+    .modal {    
+        width: 800px;
+    }
+}

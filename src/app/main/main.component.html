@@ -1,0 +1,66 @@
+<section class="main">
+    <h1 class="main-title">Главное окно</h1>
+    <input type="text" placeholder="Поиск (имя или фамилия)" class="search-input" (input)="searchWorker($event)">
+    <div class="buttons">
+        <button class="buttons__btn add-btn">Добавить</button>
+        <button class="buttons__btn edit-btn">Редактировать</button>
+        <button class="buttons__btn remove-btn">Удалить</button>
+    </div>
+    <table class="table">
+        <tr class="main-row">
+            <td>
+                <div>Превью</div>
+            </td>
+            <td>
+                <div class="name__sort">Имя</div>
+            </td>
+            <td>
+                <div class="surname__sort">Фамилия</div>
+            </td>
+            <td>
+                <div class="birthday__sort">Дата Рождения</div>
+            </td>
+            <td>
+                <div class="age__sort">Возраст</div>
+            </td>
+            <td>
+                <div class="position__sort">Должность</div>
+            </td>
+            <td>
+                <div class="remote__sort">Удалённая работа</div>
+            </td>
+            <td>
+                <div class="address__sort">Адрес проживания</div>
+            </td>
+        </tr>
+        <tr *ngFor="let worker of workers; let i = index;" class="worker-row" id="{{i}}"
+            [class.worker-row__active]="worker.current" [class.worker-row__show]="worker.show">
+            <td class="worker-id">
+                <div class="worker-id"><img src="{{worker.avatar}}" alt="Нет фото" class="table__avatar"></div>
+            </td>
+            <td class="worker-id">
+                <div class="worker-id">{{worker.name}}</div>
+            </td>
+            <td class="worker-id">
+                <div class="worker-id">{{worker.surname}}</div>
+            </td>
+            <td class="worker-id">
+                <div class="worker-id">{{worker.birthday}}</div>
+            </td>
+            <td class="worker-id">
+                <div class="worker-id">{{worker.age}}</div>
+            </td>
+            <td class="worker-id">
+                <div class="worker-id">{{worker.position}}</div>
+            </td>
+            <td class="worker-id">
+                <div class="worker-id"><input type="checkbox" checked disabled *ngIf="worker.remote; else elseCheckbox">
+                    <ng-template #elseCheckbox><input type="checkbox" disabled></ng-template>
+                </div>
+            </td>
+            <td class="worker-id">
+                <div class="worker-id">{{worker.address}}</div>
+            </td>
+        </tr>
+    </table>
+</section>

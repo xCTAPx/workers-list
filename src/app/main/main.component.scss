@@ -1,0 +1,158 @@
+.main-title {
+    font-size: 28px;
+    text-transform: uppercase;
+    padding: 25px 0 0 25px;
+}
+
+.search-input {
+    height: 25px;
+    margin: 50px 0 0 25px;
+    padding-left: 5px;
+    width: 200px;
+}
+
+.buttons {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    margin: 25px 0 0 25px;
+
+    .buttons__btn {
+        color: #fff;
+
+        padding: 7px;
+        cursor: pointer;
+
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+}
+
+.add-btn {
+    background: rgb(11, 223, 64);
+    &:hover {
+        background: rgb(0, 253, 63);
+    }
+}
+
+.edit-btn {
+    background: rgb(8, 159, 219);
+    &:hover {
+        background: rgb(0, 183, 255);
+    }
+}
+
+.remove-btn {
+    background: rgb(223, 11, 22);
+    &:hover {
+        background: rgb(255, 0, 13);
+    }
+}
+
+.table {
+    margin: 50px auto;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    td {
+        border: 1px solid black;
+        overflow: auto;
+    }
+    td div {
+        border: 0;
+        width: auto;
+        height: 25px;
+        min-width: 120px;
+        max-width: 200px;
+        resize: horizontal;
+        overflow: auto;
+
+        padding-top: 5px;
+        text-align: center;
+    }
+}
+
+.main-row {
+    background: burlywood;
+    cursor: pointer;
+    td:hover {
+        background: rgb(224, 176, 113);
+    }
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 16px;
+}
+
+.worker-row {
+    display: none;
+    height: 75px;
+    &:hover:not(.worker-row__active) {
+        background-color: rgba(214, 174, 156, 0.25);
+    }
+}
+
+.worker-row__show {
+    display: table-row;
+}
+
+.worker-row__active {
+    background-color: rgba(214, 174, 156, 0.8);
+}
+
+.table__avatar {
+    overflow-y: hidden;
+    height: 30px;
+    width: auto;
+}
+
+@media screen and (max-width: 1236px) {
+    .buttons {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .buttons {
+        width: 35%;
+    }
+    .table {
+        td div {
+            font-size: 12px;
+            min-width: 80px;
+            max-width: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 702px) {
+    .buttons {
+        width: 40%;
+    }
+    .table {
+        td div {
+            font-size: 12px;
+            min-width: 100px;
+            max-width: 140px;
+        }
+    }
+}
+
+@media screen and (max-width: 618px) {
+    .buttons {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 496px) {
+    .buttons {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .buttons {
+        width: 100%;
+    }
+}
